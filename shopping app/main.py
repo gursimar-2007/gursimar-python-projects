@@ -11,6 +11,7 @@ class ShoppingMall:
         print("="*60)
         print("AVAILAIBLE ITEMS")
         print("="*60)
+        # print(f"{s_no:self.items})
         for s_no in self.items:
             print(f"{s_no}")
         # print(f"{self.items}\n")
