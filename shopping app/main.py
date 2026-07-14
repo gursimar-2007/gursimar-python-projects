@@ -9,7 +9,7 @@ class ShoppingMall:
         }
     def display_items(self):
         print(self.items)
-    display_items(self.i)
+    display_items(self.items)
     def startshopping(self):
         
 
