@@ -12,6 +12,7 @@ class ShoppingMall:
         return 
     def startshopping():
         print("welcome to the SKYDECK")
+        display
 
         
         
