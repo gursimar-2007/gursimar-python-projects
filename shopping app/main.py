@@ -8,9 +8,9 @@ class ShoppingMall:
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
     def display_items(self):
-        print(self.items)
-    def startshopping(self):
-        self
+        print("happy birthday")
+    def startshopping():
+         
         
 
 
