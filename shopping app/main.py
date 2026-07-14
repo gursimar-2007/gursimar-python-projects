@@ -12,7 +12,6 @@ class ShoppingMall:
         return 
     def startshopping():
         print("welcome to the SKYDECK")
-        display
 
         
         
@@ -62,6 +61,7 @@ class ShoppingMall:
 if __name__=="__main__":
         self.display_items()
         mall,startshopping()
+        # display_items()
 
 
 
