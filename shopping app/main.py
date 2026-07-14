@@ -9,7 +9,7 @@ class ShoppingMall:
         }
     def display_items(self):
         print("happy birthday")
-    def startshopping():
+    def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
 
