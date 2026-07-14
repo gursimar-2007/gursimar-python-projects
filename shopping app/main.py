@@ -8,7 +8,7 @@ class ShoppingMall:
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
         self.balance=3000
-        
+        self.cart={}
     def display_items(self):
         print("="*60)
         print("AVAILAIBLE ITEMS")
