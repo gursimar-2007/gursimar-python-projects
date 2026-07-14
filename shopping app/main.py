@@ -10,7 +10,7 @@ class ShoppingMall:
     def display_items(self):
         print(self.items)
     def startshopping(self):
-        self.display_items()
+        
 
 
 
@@ -57,6 +57,7 @@ class ShoppingMall:
 
         if __name__=="__main__":
             ShoppingMall()
+            self.display_items()
             # mall,startshopping()
 
 
