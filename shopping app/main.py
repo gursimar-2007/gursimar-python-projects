@@ -11,7 +11,7 @@ class ShoppingMall:
         print(f"{self.items}\n")
     def startShopping(self):
         for i in range(len(self.items)):
-            print()
+            print([i])
         print("welcome to the SKYDECK")
         self.display_items()
 
