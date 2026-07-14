@@ -9,9 +9,9 @@ class ShoppingMall:
         }
     def display_items(self):
         print("happy birthday")
-        self.display_items()
     def startshopping():
         print("welcome to the SKYDECK")
+        self.display_items()
 
         
         
