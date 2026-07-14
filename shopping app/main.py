@@ -10,7 +10,7 @@ class ShoppingMall:
     def display_items(self):
         print("="*60)
         print("AVAILAIBLE ITEMS")
-        
+        print("="*60)
         # print(f"{self.items}\n")
     def startShopping(self):
         print("welcome to the SKYDECK")
