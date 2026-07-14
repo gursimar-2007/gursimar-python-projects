@@ -15,7 +15,7 @@ class ShoppingMall:
 
 
 if __name__=="__main__":
-        # mall,startshopping()
+        mall.startshopping()
         # display_items()
         # hello
         print
