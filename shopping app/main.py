@@ -10,8 +10,6 @@ class ShoppingMall:
     def display_items(self):
         print(f"{self.items}\n")
     def startShopping(self):
-        for i in range(len(self.items)):
-            print(i)
         print("welcome to the SKYDECK")
         self.display_items()
 
