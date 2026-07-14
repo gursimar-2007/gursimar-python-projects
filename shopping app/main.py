@@ -10,3 +10,51 @@ class ShoppingMall:
     
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__=="__main__":
+    ShoppingMall()
+    
+
+
+
