@@ -10,7 +10,7 @@ class ShoppingMall:
     def display_items(self):
         print("happy birthday")
     def startshopping():
-        display_items()
+        print(display_items())
         
 
 
