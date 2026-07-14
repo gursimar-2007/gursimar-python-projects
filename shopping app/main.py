@@ -7,7 +7,9 @@ class ShoppingMall:
             4 :{"name":"FAST FOOD","quantity":100,"price":120},
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
-    def 
+    def display_items(self):
+        print(self.items)
+    def startshopping(self):
 
 
 
@@ -52,9 +54,10 @@ class ShoppingMall:
 
 
 
-if __name__=="__main__":
-    ShoppingMall()
-    mall,startshopping()
+
+        if __name__=="__main__":
+            ShoppingMall()
+            mall,startshopping()
 
 
 
