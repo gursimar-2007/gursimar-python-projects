@@ -12,8 +12,8 @@ class ShoppingMall:
         print("AVAILAIBLE ITEMS")
         print("="*60)
         # print(f"{s_no:self.items})
+        print(f"{"S.no":<8} {"name":<20}    {"quantity":<20}    {"price":<20}")
         for s_no,item in self.items.items():
-            print(f"{"S.no":<8} {"name":<20}    {"quantity":<20}    {"price":<20}")
             print(f"{s_no:<8} {item['name']:<20} {item['quantity']:<20}  {item["price"]:<20}")
             print("="*60)
             # print("availaible balance"=="hllo")
