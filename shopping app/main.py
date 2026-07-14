@@ -4,7 +4,7 @@ class ShoppingMall:
             {"name":stationary},
             {"name":BOOZE},
             {"name":food},
-            {"name":beverage}
+            {"name":beverage},
         }
 
 
