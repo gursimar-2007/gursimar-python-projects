@@ -21,7 +21,7 @@ class ShoppingMall:
             # print("availaible balance"=="hllo")
             print("-"*60)
             print(f"AVAILAIBLE BALANCE ={self.balance}")
-            print("=")
+            print("="*60)
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
