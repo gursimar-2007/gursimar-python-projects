@@ -14,8 +14,6 @@ class ShoppingMall:
         # print(f"{s_no:self.items})
         for s_no,item in self.items.items():
             print(f"{s_no}:{item['name']}")
-        for s_no in self.items:
-            print(f"{s_no}")
         # print(f"{self.items}\n")
     def startShopping(self):
         print("welcome to the SKYDECK")
