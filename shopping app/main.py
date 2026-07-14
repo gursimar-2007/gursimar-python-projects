@@ -13,50 +13,6 @@ class ShoppingMall:
         print("welcome to the SKYDECK")
         self.display_items()
 
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__=="__main__":
         # mall,startshopping()
