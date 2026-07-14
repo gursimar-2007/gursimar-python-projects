@@ -10,7 +10,7 @@ class ShoppingMall:
     def display_items(self):
         print(self.items)
     def startshopping(self):
-        slef
+        self
         
 
 
