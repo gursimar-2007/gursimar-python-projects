@@ -8,7 +8,7 @@ class ShoppingMall:
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
     def display_items(self):
-        print(self.items)
+        print(f"self.items")
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
