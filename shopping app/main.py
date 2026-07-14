@@ -7,6 +7,8 @@ class ShoppingMall:
             4 :{"name":"FAST FOOD","quantity":100,"price":120},
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
+        self.balance=3000
+        
     def display_items(self):
         print("="*60)
         print("AVAILAIBLE ITEMS")
