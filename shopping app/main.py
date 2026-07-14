@@ -4,7 +4,7 @@ class ShoppingMall:
             1: {"name":"HP victus","quantity":200,"price":70},
             2 :{"name":"Lenovo loq","quantity":123,"price":180},
             3 :{"name":"macbook"},
-            4 :{"name":""},
+            4 :{"name":"Lenovo Think"},
         }
 
 
