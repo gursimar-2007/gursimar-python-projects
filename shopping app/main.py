@@ -7,6 +7,6 @@ class ShoppingMall:
             4 :{"name":"FAST FOOD","quantity":100,"price":120},
             5 :{"name":"BOOZE","quantity":100,"price":700},
         }
-        
+    
 
 
