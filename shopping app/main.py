@@ -11,6 +11,8 @@ class ShoppingMall:
         print("="*60)
         print("AVAILAIBLE ITEMS")
         print("="*60)
+        for s_no in self.items:
+            
         # print(f"{self.items}\n")
     def startShopping(self):
         print("welcome to the SKYDECK")
