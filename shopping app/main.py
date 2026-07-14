@@ -15,7 +15,7 @@ class ShoppingMall:
         for s_no,item in self.items.items():
             print(f"{s_no:<8} {item['name']:<20} {item['quantity']:<20}  {item["price"]:<20}")
             print("="*60)
-            print()
+            print(availaible)
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
