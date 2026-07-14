@@ -1,10 +1,10 @@
 class ShoppingMall:
     def __init__(self):
         self.items = {
-            1: {"name":"stationary","quantity":200,"price":70},
-            2 :{"name":"BOOZE","quantity":123,"price":180},
+            1: {"name":"HP victus","quantity":200,"price":70},
+            2 :{"name":"Lenovo loq","quantity":123,"price":180},
             3 :{"name":"macbook"},
-            4 :{"name":beverage},
+            4 :{"name":""},
         }
 
 
