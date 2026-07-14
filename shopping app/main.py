@@ -13,7 +13,7 @@ class ShoppingMall:
         print("="*60)
         # print(f"{s_no:self.items})
         for s_no,item in self.items.items():
-            print(f"{s_no}:{item['name']}")
+            print(f"{s_no:<8}:{item['name']:<20}")
         # print(f"{self.items}\n")
     def startShopping(self):
         print("welcome to the SKYDECK")
