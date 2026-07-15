@@ -19,4 +19,4 @@ def subtract(x,y):
     return x-y
 
 print(f"20+10={add(20,10)}")
-print(f"x-10={subtract(20,10)}") 
+print(f"20-10={subtract(20,10)}") 
