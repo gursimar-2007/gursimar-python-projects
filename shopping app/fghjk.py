@@ -7,7 +7,7 @@ def subtract(x,y):
     return subtract
 
 def multiply(x,y):
-    
+    multiply = x*y
 x = int(input("Enter x"))
 y = int(input("Enter y"))
 op = input("Enter op")
