@@ -8,6 +8,7 @@ def subtract(x,y):
 
 def multiply(x,y):
     multiply = x*y
+    return 
 x = int(input("Enter x"))
 y = int(input("Enter y"))
 op = input("Enter op")
