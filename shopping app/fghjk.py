@@ -8,6 +8,6 @@ y = int(input("Enter y"))
 op = input("Enter op")
 match op:
     case '+': print("Sum:",sum(x,y))
-    case '-': print("Sub:",sum(x,y))
+    case '-': print("Subtract:",sum(x,y))
     case '+': print("Sum:",sum(x,y))
     case '+': print("Sum:",sum(x,y))
