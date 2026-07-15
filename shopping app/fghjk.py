@@ -3,7 +3,7 @@ def sum(x,y):
     return sum
 
 def subtract(x,y):
-    subtract
+    subtract = x-y
 
 x = int(input("Enter x"))
 y = int(input("Enter y"))
