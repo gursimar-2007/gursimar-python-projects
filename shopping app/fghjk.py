@@ -2,7 +2,8 @@ def sum(x,y):
     sum = x+y
     return sum
     subtract = x-y
-    return subt
+    return subtract
+
 
 x = int(input("Enter x"))
 y = int(input("Enter y"))
