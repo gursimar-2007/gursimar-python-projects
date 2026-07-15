@@ -1,6 +1,6 @@
 def sum(a,b):
     sum = a+b
-    re
+    return sum
 
 
 a = int(input("Enter the number"))
