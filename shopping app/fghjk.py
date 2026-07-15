@@ -7,4 +7,5 @@ def sum():
 
 outout = sum()
 print("sum", outout)
-x = int
+x = int(input("Enter x"))
+y = int(input("enter "))
