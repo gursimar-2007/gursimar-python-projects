@@ -1,6 +1,7 @@
 def sum(x,y):
     sum = x+y
     return sum
+    subtract = x-y
     
 
 x = int(input("Enter x"))
