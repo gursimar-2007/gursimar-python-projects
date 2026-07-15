@@ -1,7 +1,7 @@
 def sum(x,y):
     sum = x+y
     return sum
-
+    
 
 x = int(input("Enter x"))
 y = int(input("Enter y"))
@@ -10,4 +10,4 @@ match op:
     case '+': print("Sum:",sum(x,y))
     case '-': print("Subtract:",subtract(x,y))
     case '*': print("Multiply:",multiply(x,y))
-    case '/': print("Divide:",sum(x,y))
+    case '/': print("Divide:",divide(x,y))
