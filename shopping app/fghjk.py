@@ -2,10 +2,6 @@ def sum(x,y):
     sum = x+y
     return sum
 
-
-outout = sum()
-print("sum", outout)
-
 x = int(input("Enter x"))
 y = int(input("Enter y"))
 op = input("Enter op")
