@@ -10,7 +10,9 @@ def multiply(x,y):
     multiply = x*y
     return multiply
 
-def divide(x,y)
+def divide(x,y):
+    divide = x/y
+    return
 x = int(input("Enter x"))
 y = int(input("Enter y"))
 op = input("Enter op")
