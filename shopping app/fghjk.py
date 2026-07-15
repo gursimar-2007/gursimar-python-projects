@@ -12,7 +12,7 @@ def multiply(x,y):
 
 def divide(x,y):
     divide = x/y
-    return
+    return divide
 x = int(input("Enter x"))
 y = int(input("Enter y"))
 op = input("Enter op")
