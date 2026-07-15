@@ -8,10 +8,9 @@ def sum():
 outout = sum()
 print("sum", outout)
 
-def op():
-    x = int(input("Enter x"))
-    y = int(input("Enter y"))
-    op = input("Enter op")
+x = int(input("Enter x"))
+y = int(input("Enter y"))
+op = input("Enter op")
 
 def add(x,y):
     return x+y
