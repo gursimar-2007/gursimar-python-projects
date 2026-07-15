@@ -1,9 +1,9 @@
-def sum(a,b):
+def sum():
     a = int(input("Enter the number"))
     b = int(input("Enter the number"))
     sum = a+b
     return sum
 
 
-outout = sum(a,b)
+outout = sum()
 print("sum", outout)
