@@ -10,4 +10,4 @@ match op:
     case '+': print("Sum:",sum(x,y))
     case '-': print("Subtract:",subtract(x,y))
     case '*': print("Multiply:",multiply(x,y))
-    case '+': print("Sum:",sum(x,y))
+    case '/': print("Divide:",sum(x,y))
