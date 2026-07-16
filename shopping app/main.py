@@ -35,7 +35,7 @@ class ShoppingMall:
             except ValueError:
                 print("please input a significant number the number you have put is invalid")
                 break
-            qty=input("?")
+            qty=input("HOW MUCH QUANTITY?")
             if qty=="x":
                     print("THANKYOU FOR SHOPPING AT SKYDECK")
             try:
