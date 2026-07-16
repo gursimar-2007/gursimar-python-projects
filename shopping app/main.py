@@ -57,7 +57,7 @@ class ShoppingMall:
         # print(item)
         if qty>item["quantity"]:
             print("nah you trippin")
-        
+            total_cost=qty*item
 if __name__=="__main__":
 
     mall = ShoppingMall()
