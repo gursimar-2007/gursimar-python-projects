@@ -25,7 +25,39 @@ class ShoppingMall:
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
-    
+        while True:
+            sno=input("enter the serial number")
+            if sno=="x":
+                print("thank you for shopping at SKYDECK")
+                break
+            try:
+                sno=int(sno)
+            except ValueError:
+                print("please input a significant number the number you have put is invalid")
+                break
+            qty=input("kitna daalu sirji?")
+            if qty=="x":
+                    print("THANKYOU FOR SHOPPING AT SKYDECK")
+            try:
+                qty=int(qty)
+                if qty<=0:
+                    print("please enter a valid quantity number")
+            except ValueError:
+                print("THE NUMBER OF QUANTITY YOU HAVE PUT IS INVALID PLEASE PROCEED WITH A VALID NUMBER")
+            if self.buy_item(sno,qty):
+                contd=input.strip.lower("do you want to continue shopping")
+                if contd!=y:
+                    print("thankyou for shopping at sky deck")
+                    break
+    def buy_item(self,sno,qty):
+        if sno not in self.items:
+            print("sno does not exist")
+            return False
+        item=self.items[sno]
+        # print(item)
+        if qty>item["quantity"]:
+            print("nah you trippin")
 if __name__=="__main__":
+
     mall = ShoppingMall()
     mall.startShopping()
