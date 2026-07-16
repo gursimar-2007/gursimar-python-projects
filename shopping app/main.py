@@ -49,6 +49,7 @@ class ShoppingMall:
                 if contd!=y:
                     print("thankyou for shopping at sky deck")
                     break
+                return True
     def buy_item(self,sno,qty):
         if sno not in self.items:
             print("sno does not exist")
@@ -58,7 +59,11 @@ class ShoppingMall:
         if qty>item["quantity"]:
             print("INSUFFICIENT QUANTITY PLEASE COME LATER")
             return False
+            
         total_cost=qty*item["price"]
+        if total_cost>self.balance:
+            print("INSUFFICIENT FUNDS ")
+            return False
         item['quantity']-=qty
         self.balance-=total_cost
         if sno in self.cart:
@@ -70,6 +75,12 @@ class ShoppingMall:
                 "price":item["price"],
                 "total":total_cost
                 }
+        print("PURCHASE SUCCESSFUL")
+        print(f"item==={item['name']} quantity==={qty}")
+        print(f"REMAINING BALANCE IS {self.balance}")
+        
+
+
 if __name__=="__main__":
 
     mall = ShoppingMall()
