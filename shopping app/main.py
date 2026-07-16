@@ -57,6 +57,7 @@ class ShoppingMall:
         # print(item)
         if qty>item["quantity"]:
             print("nah you trippin")
+        
 if __name__=="__main__":
 
     mall = ShoppingMall()
