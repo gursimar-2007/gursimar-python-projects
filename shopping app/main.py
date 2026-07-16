@@ -79,6 +79,7 @@ class ShoppingMall:
                 "price":item["price"],
                 "total":total_cost
                 }
+        
     def display_cart(self):
         print("="*60)
         # print("="*60)
