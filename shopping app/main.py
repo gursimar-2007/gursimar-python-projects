@@ -59,7 +59,7 @@ class ShoppingMall:
             print("INSUFFICIENT QUANTITY PLEASE COME LATER")
             return False
         total_cost=qty*item["price"]
-        item['qty']-=qty
+        item['quantity']-=qty
         self.balance-=total_cost
 if __name__=="__main__":
 
