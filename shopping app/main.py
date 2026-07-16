@@ -71,7 +71,7 @@ class shopping_mall:
             }
         
         print("\nItem added successfully!")
-        self.display_cart()
+        # self.display_cart()
         self.display_items()
         return True     
         
