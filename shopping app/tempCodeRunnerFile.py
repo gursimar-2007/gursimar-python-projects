@@ -1,0 +1,10 @@
+        print("=" * 60)
+        print("AVAILABLE ITEMS")
+        print("="*60)
+        print(f"{'S.No':<6} {'items':<15} {'quantity':<15} {'price'}")
+        print("-"*60)
+        for s_no, item in self.items.items():
+            print(f"{s_no:<6} {item['name']:<15} {item['quantity']:<15} {item['price']}")
+        print('='* 60)   
+        print(f"your current balance : Rs. {self.balance} ") 
+        print("=" *60)

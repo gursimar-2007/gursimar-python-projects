@@ -45,15 +45,12 @@ class shopping_mall :
             "quantity": quantity,
             "price": item["price"],
             "total":total_cost}
-        print ("purchase succesfull")
-        print(f"item{item['name']} quantity {quantity} total cost{total_cost}")    
-        print(f"Remaining balance is {self.balance}")
+        print(self.display_items())
         return True     
     def display_cart(self):
         if not self.cart:
             print("\n your cart is empty .")
             return
-        
         print("=" * 60)
         print("AVAILABLE ITEMS")
         print("="*60)
@@ -64,6 +61,7 @@ class shopping_mall :
         print('='* 60)   
         print(f"your current balance : Rs. {self.balance} ") 
         print("=" *60)
+        
 
         
     def start_shopping(self):
