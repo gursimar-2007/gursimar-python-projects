@@ -56,7 +56,7 @@ class ShoppingMall:
         item=self.items[sno]
         # print(item)
         if qty>item["quantity"]:
-            print("nah you trippin")
+            print("INSUFFICIENT QUANTITY ")
             total_cost=qty*item["price"]
 if __name__=="__main__":
 
