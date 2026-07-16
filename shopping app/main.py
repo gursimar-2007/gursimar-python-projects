@@ -64,7 +64,10 @@ class ShoppingMall:
         if sno in self.cart:
             self.cart[sno]['quantity']+=qty
         else:
-            self.cart[sno]={"name"}
+            self.cart[sno]={
+                "name"=item['name'],
+                "quantity"=qty,
+                }
 if __name__=="__main__":
 
     mall = ShoppingMall()
