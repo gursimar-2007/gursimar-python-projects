@@ -63,7 +63,8 @@ class ShoppingMall:
         self.balance-=total_cost
         if sno in self.cart:
             self.cart[sno]['quantity']+=qty
-            
+        else:
+            self
 if __name__=="__main__":
 
     mall = ShoppingMall()
