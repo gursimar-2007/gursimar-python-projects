@@ -1,107 +1,105 @@
-class ShoppingMall:
+class shopping_mall :
     def __init__(self):
         self.items = {
-            1: {"name":"SNACKS","quantity":200,"price":80},
-            2 :{"name":"BULDAK","quantity":123,"price":200},
-            3 :{"name":"COLA","quantity":100,"price":100},
-            4 :{"name":"FAST FOOD","quantity":100,"price":120},
-            5 :{"name":"BOOZE","quantity":100,"price":700},
+            1:{"name":"beverages","quantity":200,"price":70},
+            2:{"name":"Diary Products","quantity":70,"price":100},
+            3:{"name":"stationary","quantity":300,"price":50},
+            4:{"name":"fruits","quantity":200,"price":30},
+            5:{"name":"vegetable","quantity":100,"price":20}
         }
-        self.balance=3000
-        self.cart={}
+        self.balance = 3000
+        self.cart = {}
     def display_items(self):
+        
+        print("=" * 60)
+        print("AVAILABLE ITEMS")
         print("="*60)
-        print("AVAILAIBLE ITEMS")
-        print("="*60)
-        # print(f"{s_no:self.items})
-        print(f"{"S.no":<8} {"name":<20}{"quantity":<20}  {"price":<20}")
+        print(f"{'S.No':<6} {'items':<15} {'quantity':<15} {'price'}")
         print("-"*60)
-        for s_no,item in self.items.items():
-            print(f"{s_no:<8} {item['name']:<20} {item['quantity']:<20}  {item["price"]:<20}")
-            # print("availaible balance"=="hllo")
-            print("-"*60)
-        print(f"AVAILAIBLE BALANCE ={self.balance}")
+        for s_no, item in self.items.items():
+            print(f"{s_no:<6} {item['name']:<15} {item['quantity']:<15} {item['price']}")
+        print('='* 60)   
+        print(f"your current balance :{self.balance} ") 
+        print("=" *60)
+    def buy_item(self,s_no,quantity):
+        if s_no not in self.items :
+            print("s_no doesnot exit")
+            return False
+        item = self.items[s_no]
+        if quantity > item['quantity']:
+            print("insufficient stock") 
+            return False
+        total_cost = quantity*item['price']
+        if total_cost > self.balance:
+            print("insufficient balance")
+            return False
+
+        item['quantity']-= quantity
+        self.balance -= total_cost
+        
+
+        if s_no in self.cart:
+            self.cart[s_no]['quantity']+=quantity
+        else:
+            self.cart[s_no]= {"name": item['name'],
+            "quantity": quantity,
+            "price": item["price"],
+            "total":total_cost}
+        print ("purchase succesfull")
+        print(f"item{item['name']} quantity {quantity} total cost{total_cost}")    
+        print(f"Remaining balance is {self.balance}")
+        return True     
+    def display_cart(self):
+        if not self.cart:
+            print("\n your cart is empty .")
+            return
+        
+        print("=" * 60)
+        print("AVAILABLE ITEMS")
         print("="*60)
-    def startShopping(self):
-        print("welcome to the SKYDECK")
+        print(f"{'S.No':<6} {'items':<15} {'quantity':<15} {'price'}")
+        print("-"*60)
+        for s_no, item in self.items.items():
+            print(f"{s_no:<6} {item['name']:<15} {item['quantity']:<15} {item['price']}")
+        print('='* 60)   
+        print(f"your current balance : Rs. {self.balance} ") 
+        print("=" *60)
+
+        
+    def start_shopping(self):
+        print("welcome to my shopping mall!")
+        print("you have Rs.3000 to spend.")
+        print("Enter x to exit at anytime.")
         self.display_items()
         while True:
-            sno=input("enter the serial number")
-            if sno=="x":
-                print("thank you for shopping at SKYDECK")
+            s_no = input("Enter serial no of item to buy ")
+            if s_no == 'x':
                 break
-            try:
-                sno=int(sno)
+
+            try :
+                s_no = int(s_no)
             except ValueError:
-                print("please input a significant number the number you have put is invalid")
-                break
-            qty=input("HOW MUCH QUANTITY?")
-            if qty=="x":
-                    print("THANKYOU FOR SHOPPING AT SKYDECK")
+                print("enter a valid number")
+
+            quantity = input("Enter quantity of item to buy")
+            if quantity == 'x':
+                break 
+            
             try:
-                qty=int(qty)
-                if qty<=0:
-                    print("please enter a valid quantity number")
+                quantity = int(quantity)
+                if quantity <=0 :
+                    print("enter a positive number")
             except ValueError:
-                print("THE NUMBER OF QUANTITY YOU HAVE PUT IS INVALID PLEASE PROCEED WITH A VALID NUMBER")
-            if self.buy_item(sno,qty):
-                contd=input("do you want to continue shopping").strip().lower()
-                if contd=="x":
-                    print("thankyou for shopping at sky deck")
-                    break
-                elif contd!="y":
-                    print("thankyou for shopping at skydeck")
+                print("enter a valid number")
+
+            if self.buy_item(s_no,quantity):
+                continue_shopping = input("do you want to continue shopping").strip().lower()
+                if continue_shopping !='y':
                     break
         self.display_cart()
-        
-    def buy_item(self,sno,qty):
-        if sno not in self.items:
-            print("sno does not exist")
-            return False
-        item=self.items[sno]
-        # print(item)
-        if qty>item["quantity"]:
-            print("INSUFFICIENT QUANTITY PLEASE COME LATER")
-            return False
-            
-        total_cost=qty*item["price"]
-        if total_cost>self.balance:
-            print("INSUFFICIENT FUNDS ")
-            return False
-        item['quantity']-=qty
-        self.balance-=total_cost
-        if sno in self.cart:
-            self.cart[sno]['quantity']+=qty
-        else:
-            self.cart[sno] = {
-                "name":item['name'],
-                "quantity":qty,
-                "price":item["price"],
-                "total":total_cost
-                }
-        
-    def display_cart(self):
-        print("="*60)
-        # print("="*60)
-        print("PURCHASE SUCCESSFUL")
-        print("-"*60)
-        total_spent=0
-        for item in self.cart.values():
-            print(f"{item['name']:<20} {item['quantity']:<15} {item['price']:<15} {item['total']:<15}")
-            total_spent+=item['total']
-        print("-"*60)
-        print(f"{'total_spent:':<35}RS.{total_spent}")
-        print(f"{'REMAINING BALANCE:':<35} {self.balance}")
-        print("="*60)
-        # print("PURCHASE SUCCESSFUL")
-        # print(f"item==={item['name']} quantity==={qty}")
-        # print(f"REMAINING BALANCE IS {self.balance}")
-        return True
-        
-        
-        
+        print("\n thank you for shopping with us")
 
 
 if __name__=="__main__":
-    mall = ShoppingMall()
-    mall.startShopping()
+    mall = shopping_mall()
+    mall.start_shopping()
