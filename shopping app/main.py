@@ -22,9 +22,6 @@ class ShoppingMall:
             print("-"*60)
         print(f"AVAILAIBLE BALANCE ={self.balance}")
         print("="*60)
-    def display_cart():
-        ...
-        
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
@@ -49,10 +46,14 @@ class ShoppingMall:
                 print("THE NUMBER OF QUANTITY YOU HAVE PUT IS INVALID PLEASE PROCEED WITH A VALID NUMBER")
             if self.buy_item(sno,qty):
                 contd=input("do you want to continue shopping").strip().lower()
-                if contd!="y":
+                if contd=="x":
                     print("thankyou for shopping at sky deck")
                     break
+                elif contd!="y":
+                    print("thankyou for shopping at skydeck")
+                    break
         self.display_cart()
+        
     def buy_item(self,sno,qty):
         if sno not in self.items:
             print("sno does not exist")
@@ -78,15 +79,28 @@ class ShoppingMall:
                 "price":item["price"],
                 "total":total_cost
                 }
+    def display_cart(self):
+        print("="*60)
+        # print("="*60)
         print("PURCHASE SUCCESSFUL")
-        print(f"item==={item['name']} quantity==={qty}")
-        print(f"REMAINING BALANCE IS {self.balance}")
+        print("-"*60)
+        total_spent=0
+        for item in self.cart.values():
+            print(f"{item['name']:<20} {item['quantity']:<15} {item['price']:<15} {item['total']:<15}")
+            total_spent+=item['total']
+        print("-"*60)
+        print(f"{'total_spent:':<35}RS.{total_spent}")
+        print(f"{'REMAINING BALANCE:':<35} {self.balance}")
+        print("="*60)
+        # print("PURCHASE SUCCESSFUL")
+        # print(f"item==={item['name']} quantity==={qty}")
+        # print(f"REMAINING BALANCE IS {self.balance}")
         return True
+        
         
         
 
 
 if __name__=="__main__":
-
     mall = ShoppingMall()
     mall.startShopping()
