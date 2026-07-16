@@ -57,8 +57,9 @@ class ShoppingMall:
         # print(item)
         if qty>item["quantity"]:
             print("INSUFFICIENT QUANTITY PLEASE COME LATER")
+            return false
         total_cost=qty*item["price"]
-
+        item
 if __name__=="__main__":
 
     mall = ShoppingMall()
