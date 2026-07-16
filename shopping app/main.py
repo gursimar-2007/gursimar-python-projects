@@ -35,7 +35,7 @@ class ShoppingMall:
             except ValueError:
                 print("please input a significant number the number you have put is invalid")
                 break
-            qty=input("kitna daalu sirji?")
+            qty=input("?")
             if qty=="x":
                     print("THANKYOU FOR SHOPPING AT SKYDECK")
             try:
@@ -56,7 +56,7 @@ class ShoppingMall:
         item=self.items[sno]
         # print(item)
         if qty>item["quantity"]:
-            print("INSUFFICIENT QUANTITY ")
+            print("INSUFFICIENT QUANTITY PLEASE COME LATER")
             total_cost=qty*item["price"]
 if __name__=="__main__":
 
