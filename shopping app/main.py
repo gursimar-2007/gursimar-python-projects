@@ -22,6 +22,9 @@ class ShoppingMall:
             print("-"*60)
         print(f"AVAILAIBLE BALANCE ={self.balance}")
         print("="*60)
+    def display_cart():
+        ...
+        
     def startShopping(self):
         print("welcome to the SKYDECK")
         self.display_items()
@@ -45,11 +48,11 @@ class ShoppingMall:
             except ValueError:
                 print("THE NUMBER OF QUANTITY YOU HAVE PUT IS INVALID PLEASE PROCEED WITH A VALID NUMBER")
             if self.buy_item(sno,qty):
-                contd=input.strip.lower("do you want to continue shopping")
-                if contd!=y:
+                contd=input("do you want to continue shopping").strip().lower()
+                if contd!="y":
                     print("thankyou for shopping at sky deck")
                     break
-                return True
+        self.display_cart()
     def buy_item(self,sno,qty):
         if sno not in self.items:
             print("sno does not exist")
@@ -78,6 +81,8 @@ class ShoppingMall:
         print("PURCHASE SUCCESSFUL")
         print(f"item==={item['name']} quantity==={qty}")
         print(f"REMAINING BALANCE IS {self.balance}")
+        return True
+        
         
 
 
