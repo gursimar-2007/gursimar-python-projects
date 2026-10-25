@@ -8,7 +8,9 @@ items={
 def food_cat():
     food_categories={
         "pizza":["pepperoni","farmhouse","pineapple","margherita"],
-        "burger":[]
+        "burger":["peri peri veg whopper","Veg makhani burst","peri peri cheese burger"],
+        "wraps":["hot garlic wrap","chicken wrap","spicy chicken chipotle","triple egg wrap"],
+        "momos":["hot steaming","hot spicy fried","tandoori momos"]
     }
 
 print("="*60)
