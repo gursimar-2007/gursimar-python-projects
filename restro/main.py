@@ -30,8 +30,8 @@ def food_cat():
     }
     if choice in food_categories:
         print(f"Available {choice}s:")
-        for i, item, in enumerate(food_categories[choice], start=1):
-            print(f"{i}. {item}")
+        for i, item,price in enumerate(food_categories[choice], start=1).items():
+            print(f"{i}. {item} - {price}")
         
     else:
         print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
