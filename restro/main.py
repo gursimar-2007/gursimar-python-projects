@@ -1,12 +1,14 @@
 print("="*60)
-
-# print the menu here
+items={
+    "pizza":250
+}
 
 print("="*60)
 
 
 
-
+def food_display():
+    pass
 def cart():
     while True:
         food=input("enter a food to buy for yourself and press q to quit")
@@ -15,3 +17,4 @@ def cart():
             print("thank you for purchasing heres your cart")
             # display the cart
             break
+    
