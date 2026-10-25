@@ -1,6 +1,9 @@
 print("="*60)
 items={
-    "pizza":250
+    "pizza":250,
+    "burger":140,
+    "momo":100,
+    "wraps":140
 }
 
 print("="*60)
