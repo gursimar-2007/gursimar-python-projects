@@ -5,6 +5,11 @@ items={
     "momo":100,
     "wraps":140
 }
+def food_cat():
+    food_categories={
+        "pizza":["pepperoni","farmhouse","pineapple","margherita"],
+        "burger":[]
+    }
 
 print("="*60)
 
