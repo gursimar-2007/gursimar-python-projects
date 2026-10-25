@@ -13,9 +13,11 @@ def food_cat():
         "wraps":["hot garlic wrap","chicken wrap","spicy chicken chipotle","triple egg wrap"],
         "momos":["hot steaming","hot spicy fried","tandoori momos"]
     }
-    print(enumerate[food_categories[choice]])
     if choice in food_categories:
-        print(food_categories[choice])
+        print(f"Available {choice}s:")
+        for i, item in enumerate(food_categories[choice], start=1):
+            print(f"{i}. {item}")
+        
     else:
         print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
 # print("="*60)
