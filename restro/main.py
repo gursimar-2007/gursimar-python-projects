@@ -8,14 +8,29 @@ items={
 def food_cat():
     choice=input("what do you wanna eat today")
     food_categories={
-        "pizza":["pepperoni","farmhouse","pineapple","margherita"],
-        "burger":["peri peri veg whopper","Veg makhani burst","peri peri cheese burger"],
-        "wraps":["hot garlic wrap","chicken wrap","spicy chicken chipotle","triple egg wrap"],
-        "momos":["hot steaming","hot spicy fried","tandoori momos"]
+        "pizza":{"pepperoni":250,
+        "farmhouse":260,
+        "pineapple":280,
+        "margherita":150
+        },
+        "burger":{"peri peri veg whopper":140
+                  ,"Veg makhani burst":120,
+                  "peri peri cheese burger":160
+                },
+        "wraps":{
+            "hot garlic wrap":160,
+            "chicken wrap":180,
+            "spicy chicken chipotle":130,
+            "triple egg wrap":199
+            },
+        "momos":{"hot steaming":130
+                 ,"hot spicy fried":150
+                 ,"tandoori momos":120
+                }
     }
     if choice in food_categories:
         print(f"Available {choice}s:")
-        for i, item in enumerate(food_categories[choice], start=1):
+        for i, item, in enumerate(food_categories[choice], start=1):
             print(f"{i}. {item}")
         
     else:
