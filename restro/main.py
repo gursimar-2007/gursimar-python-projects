@@ -13,7 +13,7 @@ def food_cat():
         "wraps":["hot garlic wrap","chicken wrap","spicy chicken chipotle","triple egg wrap"],
         "momos":["hot steaming","hot spicy fried","tandoori momos"]
     }
-    
+    print(enumerate[food_categories[choice]])
     if choice in food_categories:
         print(food_categories[choice])
     else:
