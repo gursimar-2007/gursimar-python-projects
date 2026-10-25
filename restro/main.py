@@ -13,8 +13,11 @@ def food_cat():
         "wraps":["hot garlic wrap","chicken wrap","spicy chicken chipotle","triple egg wrap"],
         "momos":["hot steaming","hot spicy fried","tandoori momos"]
     }
-    print(food_categories[choice])
-print("="*60)
+    if choice in food_categories:
+        print(food_categories[choice])
+    else:
+        print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
+# print("="*60)
 
 
 
