@@ -9,6 +9,8 @@ def food_cat():
     cart=[]
     while True:
         any_choice=input("what do you wanna eat today")
+        if (choice=='q'):
+            print("thankyou for choosing our restro")
         choice=any_choice.lower()    
         food_categories={
             "pizza":{"pepperoni":250,
