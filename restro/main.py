@@ -27,6 +27,9 @@ items={
 }
 def display_menu():
     print("="*60)
+    for categories,food in food_categories:
+        print(f"{categories}")
+
 
 
 def food_cat():
