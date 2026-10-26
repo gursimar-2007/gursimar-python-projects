@@ -27,11 +27,13 @@ items={
 }
 def display_menu(menu):
     print("="*60)
+    print("")
     for categories,food in menu.items():
 
-        print(f"{categories}")
-        for foods in food.items():
-            print(f"{foods}")
+        print(f"{categories}:\n\n")
+        for foods,price in food.items():
+            print(f"{foods:<60}: ₹{price:<60}")
+    print("="*60)
 
 
 def food_cat():
