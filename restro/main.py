@@ -25,14 +25,16 @@ items={
     "momo":100,
     "wraps":140
 }
-def display_menu():
+def display_menu(menu):
     print("="*60)
-    for categories,food in food_categories:
+    for categories,food in menu.items():
+
         print(f"{categories}")
+        for foods in food.items():
+            print(f"{foods}")
 
 
-
-def food_cat():
+def food_cat(menu):
     cart=[]
     while True:
         any_choice=input("what do you wanna eat today")
@@ -66,24 +68,11 @@ def food_cat():
         else:
             print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
 
-
-
-
-
-
-
-# print("="*60)
-
-
-
-# def food_display():
 def cart():
     while True:
         food=input("enter a food to buy for yourself and press q to quit")
-        # food.lower
         if food.lower()=="q":
             print("thank you for purchasing heres your cart")
-            # display the cart
             break
-# food_display()
-food_cat()
+
+food_cat(food_categories)
