@@ -5,6 +5,7 @@ items={
     "momo":100,
     "wraps":140
 }
+cart=[]
 def food_cat():
     while True:
         any_choice=input("what do you wanna eat today")
@@ -43,7 +44,6 @@ def food_cat():
                 item,price=items[food_chc-1]
                 print(f"you selected {item} and the price is {price} and has been added to cart")
                 # print(food_categories.items())
-                cart=[]
                 # while True:
                 cart.append(price)
                 sum(cart)
