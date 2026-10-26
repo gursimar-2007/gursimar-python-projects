@@ -8,6 +8,7 @@ items={
 def food_cat():
     any_choice=input("what do you wanna eat today")
     choice=any_choice.lower()
+    
     food_categories={
         "pizza":{"pepperoni":250,
         "farmhouse":260,
