@@ -6,52 +6,54 @@ items={
     "wraps":140
 }
 def food_cat():
-    any_choice=input("what do you wanna eat today")
-    choice=any_choice.lower()    
-    food_categories={
-        "pizza":{"pepperoni":250,
-        "farmhouse":260,
-        "pineapple":280,
-        "margherita":150
-        },
-        "burger":{"peri peri veg whopper":140
-                  ,"Veg makhani burst":120,
-                  "peri peri cheese burger":160
-                },
-        "wraps":{
-            "hot garlic wrap":160,
-            "chicken wrap":180,
-            "spicy chicken chipotle":130,
-            "triple egg wrap":199
+    while True:
+        any_choice=input("what do you wanna eat today")
+        choice=any_choice.lower()    
+        food_categories={
+            "pizza":{"pepperoni":250,
+            "farmhouse":260,
+            "pineapple":280,
+            "margherita":150
             },
-        "momos":{"hot steaming":130
-                 ,"hot spicy fried":150
-                 ,"tandoori momos":120
-                }
-    }
-    if choice in food_categories:
-        print(f"Available {choice}s:")
-        for i, (item,price) in enumerate(food_categories[choice].items(), start=1):
-            print(f"{i}. {item} - {price}")
-        food_chc=int(input("enter the index number of your pizza you want to order"))
-        print("please enter q to quit whenever you want")
-        if food_chc>i:
-            print("please enter a correct index")
+            "burger":{"peri peri veg whopper":140
+                      ,"Veg makhani burst":120,
+                      "peri peri cheese burger":160
+                    },
+            "wraps":{
+                "hot garlic wrap":160,
+                "chicken wrap":180,
+                "spicy chicken chipotle":130,
+                "triple egg wrap":199
+                },
+            "momos":{"hot steaming":130
+                     ,"hot spicy fried":150
+                     ,"tandoori momos":120
+                    }
+        }
+        if choice in food_categories:
+            print(f"Available {choice}s:")
+            for i, (item,price) in enumerate(food_categories[choice].items(), start=1):
+                print(f"{i}. {item} - {price}")
+            food_chc=int(input("enter the index number of your pizza you want to order"))
+            print("please enter q to quit whenever you want")
+            if food_chc>i:
+                print("please enter a correct index")
+            else:
+                items=list(food_categories[choice].items())
+                item,price=items[food_chc-1]
+                print(f"you selected {item} and the price is {price} and has been added to cart")
+                # print(food_categories.items())
+                cart=[]
+                # while True:
+                cart.append(price)
+                sum(cart)
+                print(cart)
+                again=input("do you want to order again please enter q to quit").lower()            
+                if(again=='q'):
+                    break
+
         else:
-            items=list(food_categories[choice].items())
-            item,price=items[food_chc-1]
-            print(f"you selected {item} and the price is {price} and has been added to cart")
-            # print(food_categories.items())
-            cart=[]
-            # while True:
-            cart.append(price)
-            sum(cart)
-            print(cart)
-                
-
-
-    else:
-        print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
+            print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
 
 
 
