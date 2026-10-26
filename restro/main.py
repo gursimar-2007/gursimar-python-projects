@@ -47,10 +47,10 @@ def food_cat():
                 # while True:
                 cart.append(price)
                 total=sum(cart)
-                print(total)
-                again=input("do you want to order again please enter q to quit").lower()            
+                again=input("do you want to order again please enter q to quit or any other key to continue your order").lower()            
                 if(again=='q'):
                     print("thankyou for coming to the restro")
+                    print(total)
                     break
 
         else:
