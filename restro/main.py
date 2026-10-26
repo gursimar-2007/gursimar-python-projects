@@ -35,7 +35,7 @@ def food_cat():
             print(f"{i}. {item} - {price}")
         food_chc=input("enter the index number of your pizza you want to order")
         list(food_categories.items())
-        print()
+        # print(food_categories.items())
     else:
         print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
 
