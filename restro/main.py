@@ -34,7 +34,7 @@ def food_cat():
         for i, (item,price) in enumerate(food_categories[choice].items(), start=1):
             print(f"{i}. {item} - {price}")
         food_chc=int(input("enter the index number of your pizza you want to order"))
-        items=list(food_categories.items())
+        items=list(food_categories[choice].items())
         item,price=items[food_chc-1]
         print(f"you selected {item} and the price is {price} and has been added to cart")
         # print(food_categories.items())
