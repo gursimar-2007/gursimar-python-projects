@@ -1,23 +1,4 @@
-items={
-    "pizza":250,
-    "burger":140,
-    "momo":100,
-    "wraps":140
-}
-def display_menu():
-    print("="*60)
-    
-
-def food_cat():
-    cart=[]
-    while True:
-        any_choice=input("what do you wanna eat today")
-
-        if (any_choice=='q'):
-            print("thankyou for choosing our restro")
-            break
-        choice=any_choice.lower()    
-        food_categories={
+food_categories={
             "pizza":{"pepperoni":250,
             "farmhouse":260,
             "pineapple":280,
@@ -38,6 +19,25 @@ def food_cat():
                      ,"tandoori momos":120
                     }
         }
+items={
+    "pizza":250,
+    "burger":140,
+    "momo":100,
+    "wraps":140
+}
+def display_menu():
+    print("="*60)
+
+
+def food_cat():
+    cart=[]
+    while True:
+        any_choice=input("what do you wanna eat today")
+
+        if (any_choice=='q'):
+            print("thankyou for choosing our restro")
+            break
+        choice=any_choice.lower()    
         if choice in food_categories:
             print(f"Available {choice}s:")
             for i, (item,price) in enumerate(food_categories[choice].items(), start=1):
