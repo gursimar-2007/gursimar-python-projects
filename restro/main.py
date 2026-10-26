@@ -9,8 +9,10 @@ def food_cat():
     cart=[]
     while True:
         any_choice=input("what do you wanna eat today")
-        if (choice=='q'):
+
+        if (any_choice=='q'):
             print("thankyou for choosing our restro")
+            break
         choice=any_choice.lower()    
         food_categories={
             "pizza":{"pepperoni":250,
@@ -39,7 +41,7 @@ def food_cat():
                 print(f"{i}. {item} - {price}")
             food_chc=int(input("enter the index number of your pizza you want to order"))
             print("please enter q to quit whenever you want")
-            if food_chc>i:
+            if (food_chc>i or food_chc<=0):
                 print("please enter a correct index")
             else:
                 items=list(food_categories[choice].items())
