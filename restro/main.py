@@ -46,8 +46,8 @@ def food_cat():
                 # print(food_categories.items())
                 # while True:
                 cart.append(price)
-                sum(cart)
-                print(cart)
+                total=sum(cart)
+                print(total)
                 again=input("do you want to order again please enter q to quit").lower()            
                 if(again=='q'):
                     print("thankyou for coming to the restro")
