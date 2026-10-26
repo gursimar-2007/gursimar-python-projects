@@ -6,9 +6,9 @@ items={
     "wraps":140
 }
 def food_cat():
+    # try:
     any_choice=input("what do you wanna eat today")
-    choice=any_choice.lower()
-    
+    choice=any_choice.lower()    
     food_categories={
         "pizza":{"pepperoni":250,
         "farmhouse":260,
@@ -35,10 +35,13 @@ def food_cat():
         for i, (item,price) in enumerate(food_categories[choice].items(), start=1):
             print(f"{i}. {item} - {price}")
         food_chc=int(input("enter the index number of your pizza you want to order"))
-        items=list(food_categories[choice].items())
-        item,price=items[food_chc-1]
-        print(f"you selected {item} and the price is {price} and has been added to cart")
-        # print(food_categories.items())
+        if food_chc>i:
+            print("please enter a correct index")
+        else:
+            items=list(food_categories[choice].items())
+            item,price=items[food_chc-1]
+            print(f"you selected {item} and the price is {price} and has been added to cart")
+            # print(food_categories.items())
         
     else:
         print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
