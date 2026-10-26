@@ -50,6 +50,7 @@ def food_cat():
                 print(cart)
                 again=input("do you want to order again please enter q to quit").lower()            
                 if(again=='q'):
+                    print("thankyou for coming to the restro")
                     break
 
         else:
