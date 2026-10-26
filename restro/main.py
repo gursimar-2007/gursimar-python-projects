@@ -34,7 +34,7 @@ def display_menu(menu):
             print(f"{foods}")
 
 
-def food_cat(menu):
+def food_cat():
     cart=[]
     while True:
         any_choice=input("what do you wanna eat today")
@@ -75,4 +75,4 @@ def cart():
             print("thank you for purchasing heres your cart")
             break
 
-food_cat(food_categories)
+display_menu(food_categories)
