@@ -38,6 +38,7 @@ def food_cat():
         item,price=items[food_chc-1]
         print(f"you selected {item} and the price is {price} and has been added to cart")
         # print(food_categories.items())
+        
     else:
         print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
 
