@@ -7,6 +7,7 @@ items={
 }
 def food_cat():
     choice=input("what do you wanna eat today")
+    choi    
     food_categories={
         "pizza":{"pepperoni":250,
         "farmhouse":260,
