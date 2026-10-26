@@ -5,8 +5,8 @@ items={
     "momo":100,
     "wraps":140
 }
-cart=[]
 def food_cat():
+    cart=[]
     while True:
         any_choice=input("what do you wanna eat today")
         choice=any_choice.lower()    
