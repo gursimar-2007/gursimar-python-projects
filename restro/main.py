@@ -1,10 +1,13 @@
-print("="*60)
 items={
     "pizza":250,
     "burger":140,
     "momo":100,
     "wraps":140
 }
+def display_menu():
+    print("="*60)
+    
+
 def food_cat():
     cart=[]
     while True:
