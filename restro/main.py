@@ -1,12 +1,9 @@
 import random
 import string
 from datetime import datetime
-def receipt():
-    time=(datetime.now())
-    # print(time)
-    print("="*60)
-    print("HAMERZZZ")
 class restro:
+
+
     def __init__(self):
         self.cart={}
         self.food_categories={
@@ -60,6 +57,7 @@ class restro:
                 for i, (item,price) in enumerate(self.food_categories[self.choice].items(), start=1):
                     print(f"{i}. {item} - {price}")
                 food_chc=int(input("enter the index number of the food you want to order"))
+                self.item=item
                 print("please enter q to quit whenever you want")
                 if (food_chc>i or food_chc<=0):
                     print("please enter a correct index")
@@ -71,6 +69,7 @@ class restro:
                     again=input("1.ENTER V TO SHOW CART\n2. ENTER Q TO QUIT\n3. ENTER D TO DELETE ANYTHING\n4. ENTER ANY OTHER KEY TO CONTINUE\n").lower()            
                     if(again=='q'):
                         print("thankyou for coming to the restro")
+                        self.receipt()
                         break
                     elif(again=='v'):
                         self.display_cart()
@@ -89,8 +88,8 @@ class restro:
             quantity=details["quantity"]
             subtotal=price*quantity
             print(f"{items}: {quantity} x ₹{price} = ₹{subtotal}")
-        
-            total += subtotal
+            total += subtotal 
+        # self.quantity=quantity
         gst=total*0.025
         print("="*60)
         total += 2*gst
@@ -118,9 +117,34 @@ class restro:
             print(f"{item} has been removed from the cart")
         else:
             print(f"item not found in cart")
-# restaurant = restro()
+    def receipt(self):
+        time = datetime.now()
+        total = 0
 
-# restaurant.display_menu()
-# restaurant.food_cat()
+        print("="*60)
+        print("HAMERZZZ")
+        print(time)
+        print("-"*60)
+
+        for items, details in self.cart.items():
+            price = details["price"]
+            quantity = details["quantity"]
+
+            subtotal = price * quantity
+            total += subtotal
+
+            print(f"{items:<30} {quantity:<5} ₹{price:<8} ₹{subtotal}")
+
+        gst = total * 0.025
+        grand_total = total + (2 * gst)
+
+        print("-"*60)
+        print(f"TOTAL: ₹{total}")
+        print(f"CGST @2.5%: ₹{gst}")
+        print(f"SGST @2.5%: ₹{gst}")
+        print(f"GRAND TOTAL: ₹{grand_total}")    
+restaurant = restro()
+
+restaurant.display_menu()
+restaurant.food_cat()
 # restaurant.display_cart()
-receipt()
