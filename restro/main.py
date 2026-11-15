@@ -1,3 +1,11 @@
+import random
+import string
+from datetime import datetime
+def receipt():
+    time=(datetime.now())
+    # print(time)
+    print("="*60)
+    print("HAMERZZZ")
 class restro:
     def __init__(self):
         self.cart={}
@@ -22,13 +30,6 @@ class restro:
                              ,"tandoori momos":120
                             }
                 }
-    # foods = list(food_categories["pizza"].items())
-    # items={
-    #     "pizza":250,
-    #     "burger":140,
-    #     "momo":100,
-    #     "wraps":140
-    # }
     def display_menu(self):
         print("="*60)
         print(f"{"A-LA-CARTE":<60}: {"PRICE":<60}")
@@ -39,6 +40,10 @@ class restro:
             for foods,price in food.items():
                 print(f"{foods:<60}: ₹{price:<60}")
         print("="*60)
+    def id_maker(self):
+        id_alpha=random.choice(string.ascii_uppercase)
+        id_num=random.randint(100,999)
+        return f"{id_alpha}{id_num}"
 
 
     def food_cat(self):
@@ -63,31 +68,29 @@ class restro:
                     item,price=items[food_chc-1]
                     print(f"you selected {item} and the price is {price} and has been added to cart")
                     self.add_to_cart(item, price)
-
-                    # print(food_categories.items())
-                    # while True:
-                    # cart.append(price)
-                    # total=sum(cart)
-                    again=input("do you want to order again please enter q to quit or any other key to continue your order or press v for cart or press d to delete something from your cart").lower()            
+                    again=input("1.ENTER V TO SHOW CART\n2. ENTER Q TO QUIT\n3. ENTER D TO DELETE ANYTHING\n4. ENTER ANY OTHER KEY TO CONTINUE\n").lower()            
                     if(again=='q'):
                         print("thankyou for coming to the restro")
                         break
                     elif(again=='v'):
                         self.display_cart()
+                    elif(again=='d'):
+                        self.remove_from_cart()
 
             else:
                 print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
     def display_cart(self):
         total=0
+        print(f"order id:{self.id_maker()}")
         print("="*60)
         print("cart")
         for items,details in self.cart.items():
             price=details["price"]
             quantity=details["quantity"]
             subtotal=price*quantity
-        print(f"{items}: {quantity} x ₹{price} = ₹{subtotal}")
+            print(f"{items}: {quantity} x ₹{price} = ₹{subtotal}")
         
-        total += subtotal
+            total += subtotal
         gst=total*0.025
         print("="*60)
         total += 2*gst
@@ -115,8 +118,9 @@ class restro:
             print(f"{item} has been removed from the cart")
         else:
             print(f"item not found in cart")
-restaurant = restro()
+# restaurant = restro()
 
-restaurant.display_menu()
-restaurant.food_cat()
-restaurant.display_cart()
+# restaurant.display_menu()
+# restaurant.food_cat()
+# restaurant.display_cart()
+receipt()
