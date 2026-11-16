@@ -2,10 +2,9 @@ import random
 import string
 from datetime import datetime
 class restro:
-
-
     def __init__(self):
         self.cart={}
+        self.order_id = self.id_maker()
         self.food_categories={
                     "pizza":{"pepperoni":250,
                     "farmhouse":260,
@@ -80,14 +79,14 @@ class restro:
                 print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
     def display_cart(self):
         total=0
-        print(f"order id:{self.id_maker()}")
+        print(f"order id:{self.order_id}")
         print("="*60)
         print("cart")
         for items,details in self.cart.items():
             price=details["price"]
             quantity=details["quantity"]
             subtotal=price*quantity
-            print(f"{items}: {quantity} x ₹{price} = ₹{subtotal}")
+            print(f"{items:<10}: {quantity:<10} x ₹{price:<10} = ₹{subtotal:<10}")
             total += subtotal 
         # self.quantity=quantity
         gst=total*0.025
@@ -111,7 +110,7 @@ class restro:
             print("you cart is emptyy")
             return
         self.display_cart()
-        item=print("enter the item you want to remove")
+        item=input("enter the item you want to remove")
         if item in self.cart:
             del self.cart[item]
             print(f"{item} has been removed from the cart")
@@ -124,6 +123,7 @@ class restro:
         print("="*60)
         print("HAMERZZZ")
         print(time)
+        print(f"{"-"*10}{self.order_id}{"-"*10}")
         print("-"*60)
 
         for items, details in self.cart.items():
@@ -144,7 +144,5 @@ class restro:
         print(f"SGST @2.5%: ₹{gst}")
         print(f"GRAND TOTAL: ₹{grand_total}")    
 restaurant = restro()
-
 restaurant.display_menu()
 restaurant.food_cat()
-# restaurant.display_cart()
