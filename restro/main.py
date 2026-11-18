@@ -55,7 +55,11 @@ class restro:
                 print(f"Available {self.choice}s:")
                 for i, (item,price) in enumerate(self.food_categories[self.choice].items(), start=1):
                     print(f"{i}. {item} - {price}")
-                food_chc=int(input("enter the index number of the food you want to order"))
+                try:
+                    food_chc=int(input("enter the index number of the food you want to order"))
+                except:
+                    print("please enter the index number of food item ")
+
                 self.item=item
                 print("please enter q to quit whenever you want")
                 if (food_chc>i or food_chc<=0):
@@ -78,6 +82,9 @@ class restro:
             else:
                 print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
     def display_cart(self):
+        if not self.cart:
+            print("nothing in cart")
+            return
         total=0
         print(f"order id:{self.order_id}")
         print("="*60)
@@ -110,7 +117,7 @@ class restro:
             print("you cart is emptyy")
             return
         self.display_cart()
-        item=input("enter the item you want to remove")
+        item=input("enter the item you want to remove").lower
         if item in self.cart:
             del self.cart[item]
             print(f"{item} has been removed from the cart")
