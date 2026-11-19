@@ -80,7 +80,10 @@ class restro:
                         self.remove_from_cart()
 
             else:
-                print("sorry we dont have this thing in our menu yet feel free to call the restro to make this")
+                print("sorry we dont have this thing in our menu yet feel free to select from these ones:")
+                print("Available categories:")
+                for i, category in enumerate(self.food_categories, start=1):
+                    print(f"{i}. {category}")
     def display_cart(self):
         if not self.cart:
             print("nothing in cart")
